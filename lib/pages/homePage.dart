@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:odc/widgets/games.dart';
+import 'package:odc/widgets/teams.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -40,7 +41,7 @@ class _HomePageState extends State<HomePage> {
               width: double.maxFinite,
               child: TabBarView(children: [
                 Games(),
-                Text("Teams"),
+                Teams(),
               ]),
             ),
           ],

@@ -2,18 +2,19 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:odc/widgets/teamCard.dart';
 import 'matchCard.dart';
 
-class Games extends StatefulWidget {
-  const Games({Key? key}) : super(key: key);
+class Teams extends StatefulWidget {
+  const Teams({Key? key}) : super(key: key);
 
   @override
-  State<Games> createState() => _GamesState();
+  State<Teams> createState() => _TeamsState();
 }
 
-class _GamesState extends State<Games> {
+class _TeamsState extends State<Teams> {
   bool isLoading = true;
-  var games = [];
+  var teams = [];
 
   void getGames() async {
     String url = "https://www.mocky.io/v2/5de8d38a3100000f006b1479";
@@ -21,7 +22,7 @@ class _GamesState extends State<Games> {
       final res = await http.get(Uri.parse(url));
       final data = jsonDecode(res.body);
       setState(() {
-        games = data["data"];
+        teams = data["data"];
         isLoading = false;
       });
     } catch (err) {
@@ -45,14 +46,14 @@ class _GamesState extends State<Games> {
             ),
           )
         : LimitedBox(
-            maxHeight: (500 * games.length).toDouble(),
+            maxHeight: (500 * teams.length).toDouble(),
             child: ListView.builder(
                 shrinkWrap: true,
-                itemCount: games.length,
+                itemCount: teams.length,
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: const EdgeInsets.all(10.0),
-                    child: MatchCard(game: games[index]),
+                    child: TeamCard(team: teams[index]),
                   );
                 }),
           );
