@@ -2,7 +2,7 @@
 
 App for ODC Internship
 
-you can download the app from [here](https://github.com/dagemtsehay1/odc/releases/download/untagged-36e4de1da055e0abf085/app-release.apk)
+you can download the app from [here](https://github.com/dagemtsehay1/odc/releases/download/1.0/app-release.apk)
 
 ## ScreenShots
 
