@@ -2,6 +2,13 @@
 
 App for ODC Internship
 
+you can download the app from [here](https://github.com/dagemtsehay1/odc/releases/download/untagged-36e4de1da055e0abf085/app-release.apk)
+
+## ScreenShots
+
+![screenshot2](https://github.com/dagemtsehay1/odc/blob/main/screenshots/2.jpg)  
+![screenshot1](https://github.com/dagemtsehay1/odc/blob/main/screenshots/1.jpg)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
